@@ -1,0 +1,134 @@
+.phone-icon-container{
+  min-height: 20px;
+  display:block;  
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 999;
+  &.top-left {
+        bottom: auto;
+        top: 20px;
+    }
+    
+    &.top-right {
+        bottom: auto;
+        top: 20px;
+        left: auto;
+        right: 20px;
+    }
+    
+    &.bottom-right {
+        left: auto;
+        right: 20px;
+    }
+}
+
+.phone-icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 20px;
+    
+  .phone-text {
+    width: 98px;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    text-transform: uppercase;
+    z-index: 99999;
+    background: #006df0;
+    color: #fff;
+    padding: 5px 0 2px 0;
+    font-size: 12px;
+    font-family: Tahoma;
+  }
+}
+.phone-icon-wrap{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+$line-circle-color: #19ad59;
+.phone-icon-line-circle {
+    border: 1px solid $line-circle-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 64px;
+    height: 64px;
+    transition: all .5s;
+    animation: phonering-alo-circle-anim 1.2s infinite;
+    border-radius: 50%;
+}
+
+$phone-icon-background-color: #006DF0;
+
+.phone-icon-circle {
+    width: 48px;
+    height: 48px;
+    background: $phone-icon-background-color url('../images/phone-receiver.png') center center no-repeat;
+    background-size: 24px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: all .25s;
+    animation: phonering-alo-circle-img-anim 1.2s infinite;
+}
+
+
+
+@keyframes phonering-alo-circle-anim {
+  0% {
+    transform: rotate(0) scale(.75);
+    opacity:1;
+  }
+ 
+
+  100% {
+    transform: rotate(0) scale(1.3);
+    opacity: 0;
+  }
+}
+
+@keyframes phonering-alo-circle-img-anim {
+  0% {
+    transform: translate(-50%,-50%) rotate(0);
+  }
+
+  10% {
+    transform: translate(-50%,-50%) rotate(-25deg);
+  }
+
+  20% {
+    transform: translate(-50%,-50%) rotate(25deg);
+  }
+
+  30% {
+    transform: translate(-50%,-50%) rotate(-25deg);
+  }
+
+  40% {
+    transform: translate(-50%,-50%) rotate(25deg);
+  }
+
+  50% {
+    transform: translate(-50%,-50%) rotate(0);
+  }
+
+  100% {
+    
+    transform: translate(-50%,-50%) rotate(0);
+  }
+}
+
+/*
+background-color: #666;
+    border-radius: 50%;
+    background-size: 24px 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+*/

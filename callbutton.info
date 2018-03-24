@@ -1,0 +1,4 @@
+name = Call Button
+description = Provides click-to-call buttons.
+core = 7.x
+scripts[] = assets/javascript/callbutton.js
